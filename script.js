@@ -104,7 +104,13 @@ function setMyStyle() {
 
   // Get the headers into some nice boxes
   $('h2').each(function(){$(this).attr('style','background-color: '+NovaBlue+';color: rgb(255,255,255);padding:6px;border:1px solid #ffffff');});
-/* Sidebar is NOT that annoying. Let's keep it for now
+
+  SidebarExpanded=SidebarShadowString+SidebarLeftExpandedString+SidebarColorWhiteString;
+    SidebarCollapsed=SidebarShadowString+SidebarLeftCollapsedString+SidebarColorBlueString;  
+  SidebarShadowString='box-shadow:' + BoxShadowDepth + 'px ' + BoxShadowDepth + 'px;';
+      $('sd-sidebar').attr('style',Expanded?SidebarExpanded:SidebarCollapsed);
+  
+    /* Sidebar is NOT that annoying. Let's keep it for now
   // Sidebar that can move in or out, and moves the rest of the screen's content with it
     SidebarShadowString='box-shadow:' + BoxShadowDepth + 'px ' + BoxShadowDepth + 'px;';
     SidebarLeftCollapsedString='left: -230px;';
