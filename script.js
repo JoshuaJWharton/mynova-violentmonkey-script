@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        New script villanova.edu
+// @name        MyNova Style Improver
 // @namespace   Violentmonkey Scripts
 // @match       https://mynova.villanova.edu/*
 // @grant       none
