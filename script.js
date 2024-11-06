@@ -3,10 +3,10 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://mynova.villanova.edu/*
 // @grant       none
-// @version     1.0.2
+// @version     1.0.3
 // @require https://code.jquery.com/jquery-1.7.2.min.js
 // @author      -
-// @description 11/6/2024, 9:19 AM
+// @description 11/6/2024, 9:32 AM
 // ==/UserScript==
 
 
