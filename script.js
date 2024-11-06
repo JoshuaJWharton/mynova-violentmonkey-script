@@ -3,10 +3,10 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://mynova.villanova.edu/*
 // @grant       none
-// @version     1.0.6
+// @version     1.0.7
 // @require https://code.jquery.com/jquery-1.7.2.min.js
 // @author      -
-// @description 11/6/2024, 9:50 AM
+// @description 11/6/2024, 9:56 AM
 // ==/UserScript==
 
 
@@ -138,15 +138,10 @@ var loginAction = window.setTimeout(function(){
 function logMeIn() {
   console.log('Total number of espd-message objects: ');
   console.log($('espd-message').length);
-  items=0;
   $('espd-message').each(function() {
-          items++;
-          console.log('Clicking on ' + $(this).attr('key'));
-          setTimeout(() => {
-              console.log('Paused 1 seconds, clicking!');
-                    $(this).click();
-          }, 1000 * items);
-  
+      if ($(this).attr('key')=='profile.signIn') {
+        window.location='https://mynova.villanova.edu/?login=true';
+      }
   });
 }
 
