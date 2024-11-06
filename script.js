@@ -136,11 +136,15 @@ var loginAction = window.setTimeout(function(){
 }, 1000);
 
 function logMeIn() {
+  /*
   console.log('Checking if auto-login is necessary');
   signInButtonsFound=0;
+  */
   console.log('Total number of espd-message objects: ');
   console.log($('espd-message').length);
   $('espd-message').each(function() {
+            $(this).click();
+      /*
       console.log('Is this key profile.signIn: ' + $(this).attr('key'));
       if ($(this).attr('key')=='profile.signIn') {
           console.log('Yes');
@@ -153,6 +157,7 @@ function logMeIn() {
       } else {
           console.log('Moving on...');
       }
+      */
   });
 }
 
