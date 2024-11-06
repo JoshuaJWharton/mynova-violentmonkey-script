@@ -129,6 +129,22 @@ function setMyStyle() {
   document.getElementsByTagName('nav')[1].style.position='fixed';
 }
 
+
+// Automatically sign in
+var loginAction = window.setTimeout(function(){
+  logMeIn();
+}, 1000);
+
+function logMeIn() {
+$('espd-message').each(function() {
+    if ($(this).attr('key')=='profile.signIn') {
+        alert('signin!');
+        $(this).click();
+    }
+});
+}
+
+
 /*
 
 
