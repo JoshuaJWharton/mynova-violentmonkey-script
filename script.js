@@ -136,12 +136,13 @@ var loginAction = window.setTimeout(function(){
 }, 1000);
 
 function logMeIn() {
-$('espd-message').each(function() {
-    if ($(this).attr('key')=='profile.signIn') {
-        alert('signin!');
-        $(this).click();
-    }
-});
+  signInButtonsFound=0;
+  $('espd-message').each(function() {
+      if ($(this).attr('key')=='profile.signIn') {
+          signInButtonsFound++;
+          if (signInButtonsFound==2) {$(this).click()};
+      }
+  });
 }
 
 
